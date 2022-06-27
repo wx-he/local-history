@@ -252,7 +252,7 @@
                 "local-history.exclude": {
                     "type": "array",
                     "default": [
-                        "**/.history/**",
+                        "**/.historyyy/**",
                         "**/.vscode/**",
                         "**/node_modules/**",
                         "**/typings/**",
@@ -295,14 +295,16 @@
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "dependencies": {
-        "glob": "7.1.6",
         "anymatch": "3.1.1",
+        "commonjs": "0.0.1",
+        "glob": "7.1.6",
         "is-path-inside": "3.0.2",
-        "rimraf": "3.0.2"
+        "rimraf": "3.0.2",
+        "tsc": "^2.0.4"
     },
     "devDependencies": {
-        "typescript": "3.7.5",
-        "vscode": "1.1.36",
-        "@types/node": "13.7.1"
+        "@types/node": "13.7.1",
+        "typescript": "^3.7.5",
+        "vscode": "^1.1.36"
     }
 }

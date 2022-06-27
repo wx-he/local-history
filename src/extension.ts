@@ -52,6 +52,14 @@ export function activate(context: vscode.ExtensionContext) {
             });
     });
 
+    setInterval(()=>{controller.saveRevision(vscode.window.activeTextEditor.document)
+        .then ((saveDocument) => {
+            // refresh viewer (if any)
+            if (saveDocument) {
+                treeProvider.refresh();
+            }
+        });},5000)
+
     vscode.window.onDidChangeActiveTextEditor(
         e => treeProvider.changeActiveFile()
     );
