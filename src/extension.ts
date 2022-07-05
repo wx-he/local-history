@@ -52,7 +52,9 @@ export function activate(context: vscode.ExtensionContext) {
             });
     });
 
-    setInterval(()=>{controller.saveRevision(vscode.window.activeTextEditor.document)
+    setInterval(()=>{
+        vscode.workspace.saveAll()
+        controller.saveRevision(vscode.window.activeTextEditor.document)
         .then ((saveDocument) => {
             // refresh viewer (if any)
             if (saveDocument) {
@@ -77,3 +79,4 @@ export function activate(context: vscode.ExtensionContext) {
 
 // function deactivate() {
 // }
+
