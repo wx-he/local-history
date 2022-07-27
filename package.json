@@ -57,6 +57,18 @@
         },
         "commands": [
             {
+                "command": "treeLocalHistory.enableSaving",
+                "title": "Enable Saving Files",
+                "when": false,
+                "icon": "$(refresh)"
+            },
+            {
+                "command": "treeLocalHistory.disableSaving",
+                "title": "Disable Saving Files",
+                "when": false,
+                "icon": "$(refresh)"
+            },
+            {
                 "command": "treeLocalHistory.refresh",
                 "title": "Refresh",
                 "when": false,
